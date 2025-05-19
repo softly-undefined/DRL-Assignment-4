@@ -78,7 +78,6 @@ class Critic(nn.Module):
     def forward(self, x, a):
         return self.net(torch.cat([x, a], dim=1))
 
-
 # Do not modify the input of the 'act' function and the '__init__' function. 
 class Agent(object):
     """Agent that acts randomly."""
