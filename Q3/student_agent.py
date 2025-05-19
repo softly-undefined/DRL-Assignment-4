@@ -27,7 +27,7 @@ class Agent(object):
         self.actor = Actor(state_dim=self.state_dim, action_dim=self.action_dim, max_action=self.max_action)
 
         # load in our model
-        self.actor.load_state_dict(torch.load("ddpg_actor_ep2500", map_location="cpu"))
+        self.actor.load_state_dict(torch.load("ddpg_actor_ep2500.pth", map_location="cpu"))
         self.actor.eval()
 
     def act(self, observation):
